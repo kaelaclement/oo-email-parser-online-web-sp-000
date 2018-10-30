@@ -10,7 +10,8 @@ class EmailParser
   def parse
     @emails = @emails.split(/( |,)/)
     @emails.delete_if {|s| s == nil || s == "" || s == " " || s == ","}
-    binding.pry
+    @emails.uniq!
+    @emails
   end
 
 end
