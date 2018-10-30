@@ -11,6 +11,7 @@ class EmailParser
     @emails = @emails.split(/( |,)/)
     @emails.delete_if {|s| s.empty? || s == "," || s == " "}
     @emails.uniq!
+    @emails
   end
 
 end
